@@ -43,3 +43,4 @@ jobs:
           aws-region: ap-northeast-1
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           role-duration-seconds: 1200
+          role-skip-session-tagging: true
