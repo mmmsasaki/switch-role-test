@@ -11,13 +11,13 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
 
-      - run: aws sts get-caller-identity
+      - run: aws --profile example sts get-caller-identity
 
       - aws-cli/setup:
           profile-name: example
           role-arn: AWS_ROLE_TO_ASSUME
 
-      - run: aws sts get-caller-identity
+      - run: aws --profile example sts get-caller-identity
 workflows:
   aws-cli:
     jobs:
