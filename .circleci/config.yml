@@ -17,6 +17,7 @@ jobs:
           profile-name: example
           role-arn: AWS_ROLE_TO_ASSUME
 
+      - run: aws configure list
       - run: aws --profile example sts get-caller-identity
 workflows:
   aws-cli:
