@@ -37,7 +37,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-          role-duration-seconds: 600
+          role-duration-seconds: 900
           role-skip-session-tagging: true
           aws-region: ap-northeast-1
       - run: aws sts get-caller-identity
