@@ -16,6 +16,8 @@ jobs:
       - aws-cli/setup:
           profile-name: example
           role-arn: AWS_ROLE_TO_ASSUME
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
 
       - run: aws configure list
       - run: aws --profile example sts get-caller-identity
